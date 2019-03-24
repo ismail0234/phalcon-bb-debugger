@@ -1,2 +1,42 @@
-# Phalcon-BB-Debugger
-Phalcon Framework BB Debugger
+# Phalcon BB Debugger
+
+* Phalcon Version: **3.x**
+* BB Debugger Version: **1.0.0**
+
+### What is BB Debugger ?
+The bb debugger, written for the phalcon framework, provides developers with lots of information, such as your sql queries, the amount of ram used on the page, and your page-opening speed.
+
+### How to Install BB Debugger ?
+
+1. You should download the latest version from the [Releases](https://github.com/ismail0234/BB-Debugger/releases) section.
+2. **$config->application->libraryDir** discard the folder where your library files are located.
+3. In the **config/config.php** file, define **'developerMode' => true** into the **application** array.
+4. The following code into the **config/loader.php** file is **$loader = new\Phalcon\Loader();** add after.
+```php
+<?php
+
+$loader = new \Phalcon\Loader();
+
+/* BB DEBUGGER V1.0.0 */
+if ($config->application->developerMode) {
+
+    $namespaces = array_merge($loader->getNamespaces(), array('BBDebugger'=> $config->application->libraryDir . 'BBDebugger'));
+    $loader->registerNamespaces($namespaces)->register();
+    $bbdebugger = new \BBDebugger\BBDebugger($di);
+    $bbdebugger->start();
+    
+}
+```
+5. Enjoy the fun!
+
+### ScreenShot (v1.0.0)
+
+#### Sql Querys
+![BB Debugger Phalcon Querys](https://i.imgur.com/MxvT9tr.png)
+
+#### Server Variables
+![BB Debugger Phalcon Servers](https://i.imgur.com/EbhTlIw.png)
+
+#### Cookies
+![BB Debugger Phalcon Cookies](https://i.imgur.com/p0HQSB3.png)
+
