@@ -8,7 +8,7 @@ The bb debugger, written for the phalcon framework, provides developers with lot
 
 ### How to Install BB Debugger ?
 
-1. You should download the latest version from the [Releases](https://github.com/ismail0234/BB-Debugger/releases) section.
+1. You should download the latest version from the [Releases](https://github.com/ismail0234/Phalcon-BB-Debugger/releases) section.
 2. **$config->application->libraryDir** discard the folder where your library files are located.
 3. In the **config/config.php** file, define **'developerMode' => true** into the **application** array.
 4. The following code into the **config/loader.php** file is **$loader = new\Phalcon\Loader();** add after.
