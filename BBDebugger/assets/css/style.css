@@ -63,6 +63,10 @@ body{
 	text-align:center;
 }
 
+.bb-text-left{
+	text-align: left;
+}
+
 .bb-d-none{
 	display: none;
 }
