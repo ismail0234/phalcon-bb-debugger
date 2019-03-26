@@ -6,9 +6,15 @@
 ### What is BB Debugger ?
 The bb debugger, written for the phalcon framework, provides developers with lots of information, such as your sql queries, the amount of ram used on the page, and your page-opening speed.
 
+### Composer Install Files
+```php
+composer require ismail0234/phalcon-bb-debugger
+}
+```
+
 ### How to Install BB Debugger ?
 
-1. You should download the latest version from the [Releases](https://github.com/ismail0234/Phalcon-BB-Debugger/releases) section.
+1. You should download the latest version from the [Releases](https://github.com/ismail0234/Phalcon-BB-Debugger/releases) section. (**or install composer files**)
 2. **$config->application->libraryDir** discard the folder where your library files are located.
 3. In the **config/config.php** file, define **'developerMode' => true** into the **application** array.
 4. The following code into the **config/loader.php** file is **$loader = new\Phalcon\Loader();** add after.
