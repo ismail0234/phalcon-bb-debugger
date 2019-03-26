@@ -1,0 +1,22 @@
+{
+    "name": "ismail0234/Phalcon-BB-Debugger",
+    "description": "Phalcon BB Debugger Strong and easy install.",
+    "type": "library",
+    "keywords": ["phalcon", "debugger", "bb debugger", "debug", "webdebug"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "İsmail Satilmiş",
+            "email": "info@botbenson.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.5",
+    },
+    "autoload": {
+        "psr-4": {
+            "BBDebugger\\BBDebugger\\": "BBDebugger/"
+        }
+    },
+    "minimum-stability": "stable",
+}
