@@ -18,5 +18,5 @@
             "BBDebugger\\BBDebugger\\": "BBDebugger/"
         }
     },
-    "minimum-stability": "1.*"
+    "minimum-stability": ">=1.*"
 }
