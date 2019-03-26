@@ -8,6 +8,9 @@
 * Phalcon Version: **3.x**
 * BB Debugger Version: **1.0.2**
 
+### Change Log
+- See [ChangeLog](https://github.com/ismail0234/phalcon-bb-debugger/blob/master/CHANGELOG.md)
+
 ### What is BB Debugger ?
 The bb debugger, written for the phalcon framework, provides developers with lots of information, such as your sql queries, the amount of ram used on the page, and your page-opening speed.
 
