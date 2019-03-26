@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-0": {
-            "BBDebugger\\BBDebugger\\": "BBDebugger/"
+            "BBDebugger\\": "BBDebugger/"
         }
     },
     "minimum-stability": "stable"
