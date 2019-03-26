@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/ismail0234/phalcon-bb-debugger/v/stable)](https://packagist.org/packages/ismail0234/phalcon-bb-debugger)
+[![Total Downloads](https://poser.pugx.org/ismail0234/phalcon-bb-debugger/downloads)](https://packagist.org/packages/ismail0234/phalcon-bb-debugger)
+[![Monthly Downloads](https://poser.pugx.org/ismail0234/phalcon-bb-debugger/d/monthly)](https://packagist.org/packages/ismail0234/phalcon-bb-debugger)
+[![License](https://poser.pugx.org/ismail0234/phalcon-bb-debugger/license)](https://packagist.org/packages/ismail0234/phalcon-bb-debugger)
+
 # Phalcon BB Debugger
 
 * Phalcon Version: **3.x**
