@@ -70,18 +70,26 @@
 				  <th class="bb-text-center" width="10%" scope="col">Speed</th>
 				</tr>
 			  </thead>
-			  <tbody class="">
-			  	<?php foreach ($querys as $key => $value): ?>
-					<tr>
-					  	<td class="bb-text-center" width="5%" scope="row"><?php echo ($key + 1); ?></td>
-					  	<td class="bb-col-auto">
-					  		<div class="bb-single-line">
-					  			<?php echo $value["sql"]["raw"]; ?>
-					  		</div>
-					  	</td>
-					  	<td class="bb-text-center" width="10%"><?php echo round($value["speed"] , 4); ?> sn</td>
-					</tr>		  		
-			  	<?php endforeach ?>
+			  <tbody>
+			  	<?php if (count($querys)): ?>
+				  	<?php $counter = 1;
+				  		foreach ($querys as $key => $value): ?>
+						<tr>
+						  	<td class="bb-text-center" width="5%" scope="row"><?php echo ($counter++); ?></td>
+						  	<td class="bb-col-auto">
+						  		<div class="bb-single-line">
+						  			<?php echo $value["sql"]["raw"]; ?>
+						  		</div>
+						  	</td>
+						  	<td class="bb-text-center" width="10%"><?php echo round($value["speed"] , 4); ?> sn</td>
+						</tr>		  		
+				  	<?php endforeach ?>			  		
+			  	<?php else: ?>
+			  		<tr>
+			  			<td colspan="3" class="bb-text-center">Not found querys.</td>
+			  		</tr>
+			  	<?php endif ?>
+
 			  </tbody>
 			</table>
 			
@@ -99,19 +107,26 @@
 				  <th class="bb-col-auto bb-text-left" scope="col">Value</th>
 				</tr>
 			  </thead>
-			  <tbody class="">
-			  	<?php $counter = 1;
-			  		foreach ($servers as $key => $value): ?>
-					<tr>
-					  	<td class="bb-text-center" cope="row"><?php echo ($counter++); ?></td>
-					  	<td>
-					  		<div class="bb-single-line"><?php echo $key; ?></div>
-					  	</td>
-					  	<td class="bb-col-auto">
-					  		<div class="bb-single-line"><?php echo $value; ?></div>
-					  	</td>
-					</tr>		  		
-			  	<?php endforeach ?>
+			  <tbody>
+			  	<?php if (count($servers)): ?>
+				  	<?php $counter = 1;
+				  		foreach ($servers as $key => $value): ?>
+						<tr>
+						  	<td class="bb-text-center" cope="row"><?php echo ($counter++); ?></td>
+						  	<td>
+						  		<div class="bb-single-line"><?php echo $key; ?></div>
+						  	</td>
+						  	<td class="bb-col-auto">
+						  		<div class="bb-single-line"><?php echo $value; ?></div>
+						  	</td>
+						</tr>		  		
+				  	<?php endforeach ?>			  		
+			  	<?php else: ?>
+			  		<tr>
+			  			<td colspan="3" class="bb-text-center">Not found servers.</td>
+			  		</tr>
+			  	<?php endif ?>
+
 			  </tbody>
 			</table>
 			
@@ -129,24 +144,72 @@
 				  <th class="bb-col-auto bb-text-left" scope="col">Value</th>
 				</tr>
 			  </thead>
-			  <tbody class="">
-			  	<?php $counter = 1;
-			  		foreach ($cookies as $key => $value): ?>
-					<tr>
-					  	<td class="bb-text-center" cope="row"><?php echo ($counter++); ?></td>
-					  	<td>
-					  		<div class="bb-single-line"><?php echo $key; ?></div>
-					  	</td>
-					  	<td class="bb-col-auto">
-					  		<div class="bb-single-line"><?php echo $value; ?></div>
-					  	</td>
-					</tr>		  		
-			  	<?php endforeach ?>
+			  <tbody>
+			  	<?php if (count($cookies)): ?>
+				  	<?php $counter = 1;
+				  		foreach ($cookies as $key => $value): ?>
+						<tr>
+						  	<td class="bb-text-center" cope="row"><?php echo ($counter++); ?></td>
+						  	<td>
+						  		<div class="bb-single-line"><?php echo $key; ?></div>
+						  	</td>
+						  	<td class="bb-col-auto">
+						  		<div class="bb-single-line"><?php echo $value; ?></div>
+						  	</td>
+						</tr>		  		
+				  	<?php endforeach ?>			  		
+			  	<?php else: ?>
+			  		<tr>
+			  			<td colspan="3" class="bb-text-center">Not found cookies.</td>
+			  		</tr>
+			  	<?php endif ?>
+
 			  </tbody>
 			</table>
 			
 		</div>
 	</div>
+
+	<div class="bb-container bb-session bb-d-none" id="session">
+		<div class="bb-table-scrollbar">
+		
+			<table class="bb-table bb-table-hover">
+			  <thead>
+				<tr>
+				  <th class="bb-text-center" width="5%" scope="col">#</th>
+				  <th scope="col" class="bb-text-left" width="25%" >Name</th>
+				  <th class="bb-col-auto bb-text-left" scope="col">Value</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  	<?php if (count($sessions)): ?>
+				  	<?php $counter = 1;
+				  		foreach ($sessions as $key => $value): ?>
+						<tr>
+						  	<td class="bb-text-center" cope="row"><?php echo ($counter++); ?></td>
+						  	<td>
+						  		<div class="bb-single-line"><?php echo $key; ?></div>
+						  	</td>
+						  	<td class="bb-col-auto">
+						  		<?php if (is_array($value)): ?>
+					  				<pre><?php echo nl2br(print_r($value, true)); ?></pre>
+					  			<?php else: ?>
+					  				<?php echo $value; ?>
+						  		<?php endif ?>
+						  	</td>
+						</tr>		  		
+				  	<?php endforeach ?>			  		
+			  	<?php else: ?>
+			  		<tr>
+			  			<td colspan="3" class="bb-text-center">Not found sessions.</td>
+			  		</tr>
+			  	<?php endif ?>
+
+			  </tbody>
+			</table>
+			
+		</div>
+	</div>	
 
 </div>
 
