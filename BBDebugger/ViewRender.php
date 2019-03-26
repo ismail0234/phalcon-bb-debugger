@@ -76,8 +76,7 @@ class ViewRender
         $view->memory   = $this->getMemoryCalculate(memory_get_usage());
         $view->cookies  = $_COOKIE;
         $view->servers  = $_SERVER;
-        // maybe future
-        // $view->sessions = $_SESSION;
+        $view->sessions = $_SESSION;
         $view->querys   = BBDebugger::$logList['db'];
         $view->time     = round(microtime(1) - BBDebugger::$startTime, 4);
 
