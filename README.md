@@ -9,7 +9,6 @@ The bb debugger, written for the phalcon framework, provides developers with lot
 ### Composer Install Files
 ```php
 composer require ismail0234/phalcon-bb-debugger
-}
 ```
 
 ### How to Install BB Debugger ?
