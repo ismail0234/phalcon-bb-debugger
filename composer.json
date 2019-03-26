@@ -14,7 +14,7 @@
     	"php": ">=5.5"
     },
     "autoload": {
-        "psr-4": {
+        "psr-0": {
             "BBDebugger\\BBDebugger\\": "BBDebugger/"
         }
     },
