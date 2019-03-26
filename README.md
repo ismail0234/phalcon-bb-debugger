@@ -6,7 +6,7 @@
 # Phalcon BB Debugger
 
 * Phalcon Version: **3.x**
-* BB Debugger Version: **1.0.0**
+* BB Debugger Version: **1.0.1**
 
 ### What is BB Debugger ?
 The bb debugger, written for the phalcon framework, provides developers with lots of information, such as your sql queries, the amount of ram used on the page, and your page-opening speed.
@@ -27,7 +27,7 @@ composer require ismail0234/phalcon-bb-debugger
 
 $loader = new \Phalcon\Loader();
 
-/* BB DEBUGGER V1.0.0 */
+/* BB DEBUGGER V1.0.1 */
 if ($config->application->developerMode) {
 
     $namespaces = array_merge($loader->getNamespaces(), array('BBDebugger'=> $config->application->libraryDir . 'BBDebugger'));
