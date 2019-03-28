@@ -6,7 +6,7 @@
 # Phalcon BB Debugger
 
 * Phalcon Version: **3.x**
-* BB Debugger Version: **1.0.2**
+* BB Debugger Version: **1.0.3**
 
 ### Change Log
 - See [ChangeLog](https://github.com/ismail0234/phalcon-bb-debugger/blob/master/CHANGELOG.md)
