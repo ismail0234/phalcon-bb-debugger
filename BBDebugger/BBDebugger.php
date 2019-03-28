@@ -13,7 +13,7 @@ class BBDebugger implements InjectionAwareInterface
 
     protected $di;
 
-    public static $version = "v1.0.2";
+    public static $version = "v1.0.3";
 
     public static $startTime;
 
